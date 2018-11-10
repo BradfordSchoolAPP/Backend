@@ -1,0 +1,3 @@
+config/cable.yml
+config/database.yml
+config/storage.yml
