@@ -3,7 +3,7 @@ module V1
     resource :news do
       desc 'Get last 10 news'
       get do
-        present New.all.limit(10), with: Entities::New
+        present New.all.limit(10).order_by('date desc'), with: Entities::New
       end
 
       desc 'Create a new'

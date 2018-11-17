@@ -373,3 +373,162 @@ MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{
 MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
 MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70100646679780 type=uuid data=0x2462b67fd375410c...>}]}
 MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 14:46:19 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | Errno::ECONNREFUSED: Connection refused - connect(2) for 127.0.0.1:27017
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "lsid"=>{"id"=><BSON::Binary:0x70265398749500 type=uuid data=0xed89233b7c1a45dc...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.008s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70265398749500 type=uuid data=0xed89233b7c1a45dc...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 14:47:12 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "lsid"=>{"id"=><BSON::Binary:0x47303045682180 type=uuid data=0x5e50531f0c9f43f3...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47303045682180 type=uuid data=0x5e50531f0c9f43f3...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 14:50:52 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:17:18 -0300
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:17:26 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05b3675e19d19a777a3cb'), "title"=>"\"new_1\"", "details"=>"\"details new 1\"", "img_url"...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:17:36 -0300
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:18:10 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05b6275e19d19a777a3cc'), "title"=>"new_1", "details"=>"details new 1", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:18:17 -0300
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:18:29 -0300
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:18:32 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05b7875e19d19a777a3cd'), "title"=>"new_1", "details"=>"details new 1", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:18:46 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05b8675e19d19a777a3ce'), "title"=>"new_2", "details"=>"details new 2", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:18:59 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05b9375e19d19a777a3cf'), "title"=>"new_3", "details"=>"details new 3", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:19:09 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05b9d75e19d19a777a3d0'), "title"=>"new_4", "details"=>"details new 4", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:19:18 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05ba675e19d19a777a3d1'), "title"=>"new_5", "details"=>"details new 5", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:19:32 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05bb475e19d19a777a3d2'), "title"=>"new_6", "details"=>"details new 6", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:19:44 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05bc075e19d19a777a3d3'), "title"=>"new_7", "details"=>"details new 7", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:20:04 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05bd475e19d19a777a3d4'), "title"=>"new_8", "details"=>"details new 8", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:20:18 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05be275e19d19a777a3d5'), "title"=>"new_9", "details"=>"details new 9", "img_url"=>"http:...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:20:27 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05beb75e19d19a777a3d6'), "title"=>"new_10", "details"=>"details new 10", "img_url"=>"htt...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:20:35 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bf05bf375e19d19a777a3d7'), "title"=>"new_11", "details"=>"details new 11", "img_url"=>"htt...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 15:20:38 -0300
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
