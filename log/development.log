@@ -136,3 +136,240 @@ Completed 200 OK in 25ms (Views: 4.9ms | ActiveRecord: 0.0ms)
   ↳ /home/noteip110/.rbenv/versions/2.5.3/bin/rake:23
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/noteip110/.rbenv/versions/2.5.3/bin/rake:23
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47054715379880 type=uuid data=0x0000aac169ee45ca...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bef5b4c75e19d4940aba606'), "title"=>"doc2"}]}
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47054715379880 type=uuid data=0x0000aac169ee45ca...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x47054693267200 type=uuid data=0x7ed53b8369464579...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x47054693267200 type=uuid data=0x7ed53b8369464579...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47054693267200 type=uuid data=0x7ed53b8369464579...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x47054693267200 type=uuid data=0x7ed53b8369464579...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"_id"=>{"title"=>"noticia1"}}, "lsid"=>{"id"=><BSON::Binary:0x47054693267200 type=uuid data=0x7ed53b8369464579...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47054693267200 type=uuid data=0x7ed53b8369464579...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.006s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.008s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "projection"=>{"_id"=>1}, "limit"=>1, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "projection"=>{"_id"=>1}, "limit"=>1, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia2"}, "projection"=>{"_id"=>1}, "limit"=>1, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "projection"=>{"_id"=>1}, "limit"=>1, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{"title"=>"noticia1"}, "sort"=>{"_id"=>1}, "limit"=>1, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bef62ca75e19d4d48aba606'), "title"=>"holamundo"}]}
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69911064455940 type=uuid data=0xc24a8c584b14484c...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x47054702139280 type=uuid data=0xa9d8e056047542de...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bef657b75e19d533caba606'), "title"=>"noticia2", "details"=>"detalles2", "img_url"=>"url2",...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47054702139280 type=uuid data=0xa9d8e056047542de...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69911064557260 type=uuid data=0xcc01eabfb6314092...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bef65e975e19d5402aba606'), "title"=>"noticia3", "details"=>"detalles3", "img_url"=>"url", ...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69911064557260 type=uuid data=0xcc01eabfb6314092...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.003s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47090271385380 type=uuid data=0x411c7409f4da4022...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47090271385380 type=uuid data=0x411c7409f4da4022...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47264248007420 type=uuid data=0x3723f4284e2f42e9...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47264248007420 type=uuid data=0x3723f4284e2f42e9...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | BSdocs.count | STARTED | {"count"=>"news", "query"=>{}, "lsid"=>{"id"=><BSON::Binary:0x47264248007420 type=uuid data=0x3723f4284e2f42e9...>}}
+MONGODB | localhost:27017 | BSdocs.count | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>1, "sort"=>{"_id"=>1}, "singleBatch"=>true, "lsid"=>{"id"=><BSON::Binary:0x47264248007420 type=uuid data=0x3723f4284e2f42e9...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.003s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47264248007420 type=uuid data=0x3723f4284e2f42e9...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/" for 127.0.0.1 at 2018-11-16 22:32:02 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/noteip110/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/noteip110/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (21.6ms)
+Completed 200 OK in 101ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-16 22:32:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/news"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-16 22:33:21 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "lsid"=>{"id"=><BSON::Binary:0x69878418875660 type=uuid data=0x600b5f05e3b44143...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69878418875660 type=uuid data=0x600b5f05e3b44143...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-16 22:33:58 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>2, "lsid"=>{"id"=><BSON::Binary:0x47234563780860 type=uuid data=0xd2d5e9bbde0f4047...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x47234563780860 type=uuid data=0xd2d5e9bbde0f4047...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.001s
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-16 23:22:03 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "lsid"=>{"id"=><BSON::Binary:0x69829897761120 type=uuid data=0x414df8effad94f38...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-16 23:23:59 -0300
+MONGODB | localhost:27017 | BSdocs.insert | STARTED | {"insert"=>"news", "ordered"=>true, "lsid"=>{"id"=><BSON::Binary:0x69829897761120 type=uuid data=0x414df8effad94f38...>}, "documents"=>[{"_id"=>BSON::ObjectId('5bef7bbf75e19d7937b75686'), "title"=>"18345467-2", "details"=>"14396345-5", "img_url"=>"htt...
+MONGODB | localhost:27017 | BSdocs.insert | SUCCEEDED | 0.001s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-16 23:25:04 -0300
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69829897761120 type=uuid data=0x414df8effad94f38...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s
+Started POST "/api/v1/news" for 127.0.0.1 at 2018-11-16 23:28:08 -0300
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-16 23:29:03 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "lsid"=>{"id"=><BSON::Binary:0x70100646679780 type=uuid data=0x2462b67fd375410c...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.002s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70100646679780 type=uuid data=0x2462b67fd375410c...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
