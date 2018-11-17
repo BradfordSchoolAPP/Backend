@@ -7,6 +7,8 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+# Use MongoDB as the document database
+gem 'mongoid', '~> 7.0.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # See https://github.com/rails/execjs#readme for more supported runtimes
