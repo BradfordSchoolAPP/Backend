@@ -10,9 +10,86 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_11_18_180734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "courses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "courses_parents", id: false, force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "parent_id"
+    t.index ["course_id"], name: "index_courses_parents_on_course_id"
+    t.index ["parent_id"], name: "index_courses_parents_on_parent_id"
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "devices_parents", id: false, force: :cascade do |t|
+    t.bigint "device_id"
+    t.bigint "parent_id"
+    t.index ["device_id"], name: "index_devices_parents_on_device_id"
+    t.index ["parent_id"], name: "index_devices_parents_on_parent_id"
+  end
+
+  create_table "parents", force: :cascade do |t|
+    t.text "username"
+    t.text "password"
+    t.text "name"
+    t.text "email"
+    t.integer "phone_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parents_logs", force: :cascade do |t|
+    t.text "detail"
+    t.bigint "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["parent_id"], name: "index_parents_logs_on_parent_id"
+  end
+
+  create_table "parents_students", id: false, force: :cascade do |t|
+    t.bigint "parent_id"
+    t.bigint "student_id"
+    t.index ["parent_id"], name: "index_parents_students_on_parent_id"
+    t.index ["student_id"], name: "index_parents_students_on_student_id"
+  end
+
+  create_table "parents_user_types", id: false, force: :cascade do |t|
+    t.bigint "parent_id"
+    t.bigint "user_type_id"
+    t.index ["parent_id"], name: "index_parents_user_types_on_parent_id"
+    t.index ["user_type_id"], name: "index_parents_user_types_on_user_type_id"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.text "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_types", force: :cascade do |t|
+    t.text "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "courses_parents", "courses"
+  add_foreign_key "courses_parents", "parents"
+  add_foreign_key "devices_parents", "devices"
+  add_foreign_key "devices_parents", "parents"
+  add_foreign_key "parents_logs", "parents"
+  add_foreign_key "parents_students", "parents"
+  add_foreign_key "parents_students", "students"
+  add_foreign_key "parents_user_types", "parents"
+  add_foreign_key "parents_user_types", "user_types"
 end

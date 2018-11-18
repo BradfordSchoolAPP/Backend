@@ -1,0 +1,3 @@
+class ParentsLog < ApplicationRecord
+  
+end
