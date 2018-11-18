@@ -7,6 +7,8 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
+# Use MongoDB as the document database
+gem 'mongoid', '~> 7.0.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -16,6 +18,13 @@ gem 'puma', '~> 3.11'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Grape gems for API development
+# An opinionated framework for creating REST-like APIs in Ruby.
+gem 'grape', '~> 1.1.0'
+# An API focused facade that sits on top of an object model.
+gem 'grape-entity', '~> 0.7.1'
+# Add routes printing for Grape with Rails 
+gem 'grape_on_rails_routes', '~> 0.3.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
