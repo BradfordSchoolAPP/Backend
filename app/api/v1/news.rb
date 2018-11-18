@@ -10,7 +10,8 @@ module V1
       params do
         requires :title, type: String, desc: "New's title"
         requires :details, type: String, desc: "New's details"
-        requires :img_url, type: String, desc: "New's images links"
+        requires :img_dir, type: String, desc: "New's images directory"
+        requires :img_num, type: String, desc: "New's images quantity"
         requires :important, type: String, desc: 'Is this new important? -> T,F'
       end
       post do

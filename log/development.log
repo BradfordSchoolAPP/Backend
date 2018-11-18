@@ -532,3 +532,25 @@ MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{
 MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.001s
 MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x69915731965580 type=uuid data=0x91753cec6ffa4952...>}]}
 MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.002s
+Started GET "/" for 127.0.0.1 at 2018-11-17 21:11:14 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/noteip110/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/noteip110/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (17.2ms)
+Completed 200 OK in 188ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/news" for 127.0.0.1 at 2018-11-17 21:11:19 -0300
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyOpening topology=Unknown>
+MONGODB | Topology type 'unknown' initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerOpening address=localhost:27017 topology=Unknown>
+MONGODB | Server localhost:27017 initializing.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Unknown new=Single>
+MONGODB | Topology type 'unknown' changed to type 'single'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::ServerDescriptionChanged>
+MONGODB | Server description for localhost:27017 changed from 'unknown' to 'standalone'.
+MONGODB | EVENT: #<Mongo::Monitoring::Event::TopologyChanged prev=Single new=Single>
+MONGODB | There was a change in the members of the 'single' topology.
+MONGODB | localhost:27017 | BSdocs.find | STARTED | {"find"=>"news", "filter"=>{}, "limit"=>10, "sort"=>{"date"=>-1}, "lsid"=>{"id"=><BSON::Binary:0x70005115976700 type=uuid data=0x892e309287b242a0...>}}
+MONGODB | localhost:27017 | BSdocs.find | SUCCEEDED | 0.009s
+MONGODB | localhost:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70005115976700 type=uuid data=0x892e309287b242a0...>}]}
+MONGODB | localhost:27017 | admin.endSessions | SUCCEEDED | 0.000s

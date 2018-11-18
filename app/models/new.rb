@@ -3,7 +3,8 @@ class New
 
   field :title, type: String
   field :details, type: String
-  field :img_url, type: String
+  field :img_dir, type: String
+  field :img_num, type: Integer
   field :date, type: Time
   field :important, type: Boolean
 
@@ -14,7 +15,8 @@ class New
       anew = new
       anew.title = params[:title]
       anew.details = params[:details]
-      anew.img_url = params[:img_url]
+      anew.img_dir = params[:img_dir]
+      anew.img_num = params[:img_num]
       anew.important = params[:important]
       anew.date = Time.now
       anew
