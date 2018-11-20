@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
   enable_extension "plpgsql"
 
   create_table "courses", force: :cascade do |t|
+    t.string "year_course"
+    t.string "section"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
   end
 
   create_table "devices", force: :cascade do |t|
+    t.string "device_key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,10 +43,10 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
   end
 
   create_table "parents", force: :cascade do |t|
-    t.text "username"
-    t.text "password"
-    t.text "name"
-    t.text "email"
+    t.string "username"
+    t.string "password"
+    t.string "name"
+    t.string "email"
     t.integer "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -72,13 +75,15 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.text "name"
+    t.string "name"
+    t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_students_on_course_id"
   end
 
   create_table "user_types", force: :cascade do |t|
-    t.text "type"
+    t.text "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -92,4 +97,5 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
   add_foreign_key "parents_students", "students"
   add_foreign_key "parents_user_types", "parents"
   add_foreign_key "parents_user_types", "user_types"
+  add_foreign_key "students", "courses"
 end
