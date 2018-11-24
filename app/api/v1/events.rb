@@ -3,7 +3,7 @@ module V1
     resource :events do
       desc 'Get last 10 events'
       get do
-        present Event.where(archived: false).limit(10).order_by('date desc'), with: Entities::Event
+        present Event.all.limit(10).order_by('date desc'), with: Entities::Event
       end
 
       desc 'Create an event'
@@ -11,7 +11,8 @@ module V1
         requires :title, type: String, desc: 'Event title'
         requires :details, type: String, desc: 'Event details'
         requires :place, type: String, desc: 'Event place'
-        requires :scheduled_date, type: Time, desc: 'Event scheduled date'
+        requires :date, type: Date, desc: 'Event scheduled date'
+        requires :date, type: String, desc: 'Event scheduled hour'
       end
       post do
         new_event = Event.create_with_params params
@@ -21,11 +22,10 @@ module V1
 
       desc 'Delete an event'
       params do
-        requires :event_id, type: String, desc: 'Event id to delete'
+        requires :id, type: String, desc: 'Event id to delete'
       end
       delete do
-        event = Event.delete_with_params params
-        error! 'Unprocessable Entity', 422 unless event.save
+        error! 'Unprocessable Entity', 422 unless Event.delete_with_params params
         status 200
       end
     end

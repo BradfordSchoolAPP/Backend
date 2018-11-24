@@ -4,8 +4,7 @@ module Entities
     expose :title
     expose :details
     expose :place
-    expose :scheduled_date
     expose :date
-    expose :archived
+    expose :hour
   end
 end

@@ -4,9 +4,8 @@ class Event
   field :title, type: String
   field :details, type: String
   field :place, type: String
-  field :scheduled_date, type: Time
-  field :date, type: Time
-  field :archived, type: Boolean
+  field :date, type: Date
+  field :hour, type: String
 
   def self.create_with_params(params)
     if params.nil?
@@ -16,9 +15,8 @@ class Event
       new_event.title = params[:title]
       new_event.details = params[:details]
       new_event.place = params[:place]
-      new_event.scheduled_date = params[:scheduled_date]
-      new_event.archived = false
-      new_event.date = Time.now
+      new_event.date = params[:date]
+      new_event.hour = params[:hour]
       new_event
     end
   end
@@ -27,9 +25,9 @@ class Event
     if params.nil?
       p 'Params is null'
     else
-      event = find(params[:event_id])
+      event = find(params[:id])
       if event
-        event.archived = true
+        event.delete
         event
       end
     end
