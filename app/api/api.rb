@@ -5,6 +5,7 @@ module API
 
     version 'v1', using: :path do
       mount ::V1::News
+      mount ::V1::Events
     end
   end
 end
