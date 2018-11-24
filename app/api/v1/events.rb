@@ -3,8 +3,7 @@ module V1
     resource :events do
       desc 'Get events of the current month and year'
       get do
-        actual_date = Date.current
-        present Event.where(date_month: actual_date.month, date_year: actual_date.year), with: Entities::Event
+        present Event.current_month, with: Entities::Event
       end
 
       desc 'Create an event'
@@ -32,8 +31,7 @@ module V1
       route_param :month do
         desc 'Get events of an specific month'
         get do
-          actual_date = Date.current
-          present Event.where(date_month: params[:month], date_year: actual_date.year), with: Entities::Event
+          present Event.month_params(params), with: Entities::Event
         end
       end
     end

@@ -36,4 +36,14 @@ class Event
       end
     end
   end
+
+  def self.current_month
+    actual_date = Date.current
+    where(date_month: actual_date.month, date_year: actual_date.year)
+  end
+
+  def self.month_params(params)
+    actual_date = Date.current
+    where(date_month: params[:month], date_year: actual_date.year)
+  end
 end
