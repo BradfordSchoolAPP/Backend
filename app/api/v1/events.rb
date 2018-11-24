@@ -12,7 +12,7 @@ module V1
         requires :details, type: String, desc: 'Event details'
         requires :place, type: String, desc: 'Event place'
         requires :date, type: Date, desc: 'Event scheduled date'
-        requires :date, type: String, desc: 'Event scheduled hour'
+        requires :hour, type: String, desc: 'Event scheduled hour'
       end
       post do
         new_event = Event.create_with_params params
