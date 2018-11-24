@@ -21,7 +21,27 @@ class Event
       new_event.date_month = new_event.date.month
       new_event.date_year = new_event.date.year
       new_event.hour = params[:hour]
+      new_event.save
       new_event
+    end
+  end
+
+  def self.update_with_params(params)
+    if params.nil?
+      p 'Params is null'
+    else
+      event = find(params[:id])
+      if event
+        event.title = params[:title]
+        event.details = params[:details]
+        event.place = params[:place]
+        event.date = params[:date]
+        event.date_month = event.date.month
+        event.date_year = event.date.year
+        event.hour = params[:hour]
+        event.update
+        event
+      end
     end
   end
 
@@ -43,7 +63,11 @@ class Event
   end
 
   def self.month_params(params)
-    actual_date = Date.current
-    where(date_month: params[:month], date_year: actual_date.year)
+    if params.nil?
+      p 'Params is null'
+    else
+      actual_date = Date.current
+      where(date_month: params[:month], date_year: actual_date.year)
+    end
   end
 end

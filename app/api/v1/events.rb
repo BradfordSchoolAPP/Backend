@@ -15,9 +15,21 @@ module V1
         requires :hour, type: String, desc: 'Event scheduled hour'
       end
       post do
-        new_event = Event.create_with_params params
-        error! 'Unprocessable Entity', 422 unless new_event.save
+        error! 'Unprocessable Entity', 422 unless new_event = Event.create_with_params(params)
         present new_event, with: Entities::Event
+      end
+
+      desc 'Update an event'
+      params do
+        requires :title, type: String, desc: 'Event title'
+        requires :details, type: String, desc: 'Event details'
+        requires :place, type: String, desc: 'Event place'
+        requires :date, type: Date, desc: 'Event scheduled date'
+        requires :hour, type: String, desc: 'Event scheduled hour'
+      end
+      put do
+        error! 'Unprocessable Entity', 422 unless event = Event.update_with_params(params)
+        present event, with: Entities::Event
       end
 
       desc 'Delete an event'
@@ -25,7 +37,7 @@ module V1
         requires :id, type: String, desc: 'Event id to delete'
       end
       delete do
-        error! 'Unprocessable Entity', 422 unless Event.delete_with_params params
+        error! 'Unprocessable Entity', 422 unless Event.delete_with_params(params)
         status 200
       end
       route_param :month do
