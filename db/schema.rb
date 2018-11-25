@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
   end
 
   create_table "user_types", force: :cascade do |t|
-    t.text "tipo"
+    t.text "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

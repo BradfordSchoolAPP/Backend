@@ -10,7 +10,7 @@ Student.destroy_all
 Course.destroy_all
 Parent.destroy_all
 UserType.destroy_all
-
+Device.destroy_all
 
 Course.create([
 	{ id: '1',year_course: "1 basico", section: "A" },
@@ -45,32 +45,43 @@ Parent.create([
 p "Padres: Se ha añadido #{Parent.count} padres a la base de datos"
 
 Student.create([
-	{id: 1 , name: "Lucas Espinoza", course_id: 2},
-	{id: 2 , name: "Sofia Riquelme", course_id: 4},
-	{id: 3 , name: "Roberto Carcamo", course_id: 6},
-	{id: 4 , name: "Cristian Gonzalez", course_id: 7},
-	{id: 5 , name: "Javier Catalan", course_id: 8},
-	{id: 6 , name: "Judith Oyarzun", course_id: 3},
-	{id: 7 , name: "Ana Maria Toro", course_id: 1},
-	{id: 8 , name: "Felipe Ojeda", course_id: 5},
-	{id: 9 , name: "Helen Fierro", course_id: 14},
-	{id: 10 , name: "Priscila Guzman", course_id: 13}
+	{name: "Lucas Espinoza", course_id: 2},
+	{name: "Sofia Riquelme", course_id: 4},
+	{name: "Roberto Carcamo", course_id: 6},
+	{name: "Cristian Gonzalez", course_id: 7},
+	{name: "Javier Catalan", course_id: 8},
+	{name: "Judith Oyarzun", course_id: 3},
+	{name: "Ana Maria Toro", course_id: 1},
+	{name: "Felipe Ojeda", course_id: 5},
+	{name: "Helen Fierro", course_id: 14},
+	{name: "Priscila Guzman", course_id: 13}
 ])
 
 p "Estudiantes: Se ha añadido #{Student.count} estudiantes a la base de datos"
 
 UserType.create([
-	{id: 1 , tipo: "admin"},
-	{id: 2 , tipo: "parent"}
+	{role: "admin"},
+	{role: "parent"}
 ])
 
 p "TipoUsuario: Se ha añadido #{UserType.count} tipos de usuario a la base de datos"
 
 ParentsLog.create([
-	{id: 1, detail: "Inicia sesion", parent_id: 3},
-	{id: 2, detail: "crea noticia", parent_id: 1},
-	{id: 3, detail: "crea evento", parent_id: 6}
+	{detail: "Inicia sesion", parent_id: 3},
+	{detail: "crea noticia", parent_id: 1},
+	{detail: "crea evento", parent_id: 6}
 ])
 
 p "RegistroPadre: Se ha añadido #{ParentsLog.count} registros a la base de datos"
 
+Device.create([
+	{device_key: "AKS89JEFS09K"},
+	{device_key: "0147RC83NYRY"},
+	{device_key: "N6WVOFG26C83"},
+	{device_key: "MB2Z7695475R"},
+	{device_key: "6295GCF54N7G"},
+	{device_key: "AKS89JEFS09K"},
+	{device_key: "27TY0N874CIO"},
+	{device_key: "MX9G167D32YG"},
+
+])
