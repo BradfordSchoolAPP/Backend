@@ -1,9 +1,9 @@
 module V1
   class Events < Grape::API
     resource :events do
-      desc 'Get events of the current month and year'
+      desc 'Get all events'
       get do
-        present Event.current_month, with: Entities::Event
+        present Event.all.limit(20).order_by('date desc'), with: Entities::Event
       end
 
       desc 'Create an event'
@@ -43,7 +43,7 @@ module V1
       route_param :month do
         desc 'Get events of an specific month'
         get do
-          present Event.month_params(params), with: Entities::Event
+          present Event.find_by_month(params), with: Entities::Event
         end
       end
     end
