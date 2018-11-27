@@ -13,7 +13,7 @@ module V1
           requires :password, type: String, desc: 'Parent encrypted password'
         end
         post do
-          present Parent.find_with_params(params), with: Entities::Parent
+          present Parent.login(params), with: Entities::Parent
         end
       end
     end
