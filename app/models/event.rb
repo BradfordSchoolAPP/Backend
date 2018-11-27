@@ -62,7 +62,7 @@ class Event
     where(date_month: actual_date.month, date_year: actual_date.year)
   end
 
-  def self.month_params(params)
+  def self.find_by_month(params)
     if params.nil?
       p 'Params is null'
     else
