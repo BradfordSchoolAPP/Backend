@@ -21,6 +21,7 @@ module V1
 
       desc 'Update an event'
       params do
+        requires :id, type: JSON, desc: 'Event id'
         requires :title, type: String, desc: 'Event title'
         requires :details, type: String, desc: 'Event details'
         requires :place, type: String, desc: 'Event place'
@@ -34,7 +35,7 @@ module V1
 
       desc 'Delete an event'
       params do
-        requires :id, type: String, desc: 'Event id to delete'
+        requires :id, type: JSON, desc: 'Event id to delete'
       end
       delete do
         error! 'Unprocessable Entity', 422 unless Event.delete_with_params(params)
