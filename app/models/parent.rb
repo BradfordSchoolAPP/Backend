@@ -11,7 +11,7 @@ class Parent < ApplicationRecord
       p 'Params is null'
     else
 			begin
-				parent = where(username: params[:username], password: params[:password])
+				parent = where(email: params[:email], password: params[:password])
 			rescue
 				parent = []
 			end

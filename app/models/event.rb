@@ -30,7 +30,7 @@ class Event
     if params.nil?
       p 'Params is null'
     else
-      event = find(params[:id])
+      event = find(params[:id]['$oid'].to_s)
       if event
         event.title = params[:title]
         event.details = params[:details]
@@ -49,7 +49,7 @@ class Event
     if params.nil?
       p 'Params is null'
     else
-      event = find(params[:id])
+      event = find(params[:id]['$oid'].to_s)
       if event
         event.delete
         event
