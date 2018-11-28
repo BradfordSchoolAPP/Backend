@@ -9,7 +9,7 @@ module V1
       desc 'Login endpoint'
       resource :login do
         params do
-          requires :username, type: String, desc: 'Parent username'
+          requires :email, type: String, desc: 'Parent e-mail'
           requires :password, type: String, desc: 'Parent encrypted password'
         end
         post do
