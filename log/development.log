@@ -1542,3 +1542,5 @@ FOREIGN KEY ("user_type_id")
   ↳ /home/nico/.rvm/gems/ruby-2.5.3/bin/rake:23
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/nico/.rvm/gems/ruby-2.5.3/bin/rake:23
+ETHON: Libcurl initialized
+ETHON: performed EASY effective_url=https://exp.host/--/api/v2/push/send response_code=200 return_code=ok total_time=0.791952

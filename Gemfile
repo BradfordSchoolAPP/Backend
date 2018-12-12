@@ -25,6 +25,8 @@ gem 'grape', '~> 1.1.0'
 gem 'grape-entity', '~> 0.7.1'
 # Add routes printing for Grape with Rails 
 gem 'grape_on_rails_routes', '~> 0.3.2'
+# Expo SDK gem for notification send
+gem 'exponent-server-sdk', '~> 0.0.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
