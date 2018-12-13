@@ -1,12 +1,12 @@
 class CreateParents < ActiveRecord::Migration[5.2]
   def change
     create_table :parents do |t|
-      t.string :username
+      t.string :email
       t.string :password
       t.string :name
-      t.string :email
       t.integer :phone_number
-
+      t.boolean :recv_notifications
+      t.boolean :active_user
       t.timestamps
     end
   end
