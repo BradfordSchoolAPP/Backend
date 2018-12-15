@@ -16,6 +16,17 @@ module V1
           present Parent.login(params), with: Entities::Parent
         end
       end
+      desc 'Get students from a specific parent'
+      params do 
+        requires :id, type: Integer, desc: 'Parent id'
+      end
+      route_param :id do
+        resource :students do
+          get do
+            present Parent.students(params)
+          end
+        end
+      end
     end
   end
 end

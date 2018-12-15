@@ -18,4 +18,8 @@ class Parent < ApplicationRecord
 			parent
 		end
 	end
+
+	def self.students(params)
+    	where(id: params[:id]).map(&:students)
+	end
 end
