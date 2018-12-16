@@ -20,7 +20,7 @@ class Parent < ApplicationRecord
 	end
 
 	def add_device(params)
-		dev = Device.create(device_key: params[:token])
+		dev = Device.create(token: params[:token])
 		devices << dev
 		save
 	end

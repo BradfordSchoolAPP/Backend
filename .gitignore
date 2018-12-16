@@ -4,3 +4,4 @@ config/storage.yml
 config/mongoid.yml
 tmp/*
 log/*
+.rake_tasks~
