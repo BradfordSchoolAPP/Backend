@@ -24,4 +24,8 @@ class Parent < ApplicationRecord
 		devices << dev
 		save
 	end
+
+	def self.students(params)
+    find(params[:id]).students
+	end
 end

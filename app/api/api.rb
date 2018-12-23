@@ -8,6 +8,7 @@ module API
       mount ::V1::Events
       mount ::V1::Parents
       mount ::V1::Courses
+      mount ::V1::Students
     end
   end
 end
