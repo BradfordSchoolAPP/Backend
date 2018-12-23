@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "courses_parents", id: false, force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "parent_id"
+    t.index ["course_id"], name: "index_courses_parents_on_course_id"
+    t.index ["parent_id"], name: "index_courses_parents_on_parent_id"
+  end
+
   create_table "devices", force: :cascade do |t|
     t.string "token"
     t.datetime "created_at", null: false
@@ -82,6 +89,8 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "courses_parents", "courses"
+  add_foreign_key "courses_parents", "parents"
   add_foreign_key "devices_parents", "devices"
   add_foreign_key "devices_parents", "parents"
   add_foreign_key "parents_logs", "parents"
