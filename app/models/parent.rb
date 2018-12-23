@@ -26,6 +26,6 @@ class Parent < ApplicationRecord
 	end
 
 	def self.students(params)
-    	where(id: params[:id]).map(&:students)
+    find(params[:id]).students
 	end
 end

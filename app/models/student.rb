@@ -3,7 +3,7 @@ class Student < ApplicationRecord
 	has_and_belongs_to_many :parents
 
 	def self.myParents(params)
-    	where(id: params[:id]).map(&:parents)
+    find(params[:id]).parents
 	end
 
 	def self.CourseList(params)

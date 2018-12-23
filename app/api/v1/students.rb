@@ -9,7 +9,7 @@ module V1
         resource :parents do
           desc 'Get parents of a specific student'
           get do
-            present Student.myParents(params)
+            present Student.myParents(params), with: Entities::Parent
           end
         end
       end

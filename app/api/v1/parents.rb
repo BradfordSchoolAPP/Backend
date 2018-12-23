@@ -24,7 +24,7 @@ module V1
       route_param :id do
         resource :students do
           get do
-            present Parent.students(params)
+            present Parent.students(params), with: Entities::Student
           end
         end
       end

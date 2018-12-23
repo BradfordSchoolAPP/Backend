@@ -20,22 +20,14 @@ module V1
           present Course.sections(params)
         end
       end
-    end
-    resource :courses do
-  
-      params do
-        requires :year, type: String, desc: 'Year course to get students'
-        requires :section, type: String, desc: 'Section to get students'
+      params do 
+        requires :id, type: Integer, desc: 'Course id'
       end
-      route_param :year do
-        resource :section do
-          route_param :section do
-            desc 'something'
-            resource :students do
-              get do
-                present Course.myStudents(params)
-              end
-            end
+      route_param :id do
+        resource :students do
+          desc 'Get student for specific course'
+          get do
+            present Course.students(params), with: Entities::Student
           end
         end
       end
