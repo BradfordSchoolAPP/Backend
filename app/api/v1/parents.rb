@@ -16,6 +16,7 @@ module V1
           present Parent.login(params), with: Entities::Parent
         end
       end
+
       desc 'Get students from a specific parent'
       params do 
         requires :id, type: Integer, desc: 'Parent id'
@@ -25,6 +26,16 @@ module V1
           get do
             present Parent.students(params)
           end
+        end
+      end
+      resource :devices do
+        params do
+          requires :id, type: Integer, desc: 'Parent id'
+          requires :token, type: String, desc: 'Parent device token to store'
+        end
+        post do
+          error! 'Unprocessable Entity', 422 unless Parent.find_with_params(params).add_device(params)
+          status 200
         end
       end
     end
