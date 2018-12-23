@@ -5,4 +5,10 @@ class Student < ApplicationRecord
 	def self.myParents(params)
     	where(id: params[:id]).map(&:parents)
 	end
+
+	def self.CourseList(params)
+		{"id_course": where(id: params[:id]).map(&:course)[0].id,
+		"myCompaneros": where(["id != ?, course_id=?", params[:id], 7])
+		}
+	end
 end

@@ -7,6 +7,10 @@ class Course < ApplicationRecord
 	end
 
 	def self.sections(params)
-    where(year_course: params[:course]).map(&:section)
+    	where(year_course: params[:course]).map(&:section)
 	end
+
+	def self.myStudents(params)
+    	where(year_course: params[:year],section: params[:section]).map(&:students)
+  	end
 end

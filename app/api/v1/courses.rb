@@ -21,5 +21,24 @@ module V1
         end
       end
     end
+    resource :courses do
+  
+      params do
+        requires :year, type: String, desc: 'Year course to get students'
+        requires :section, type: String, desc: 'Section to get students'
+      end
+      route_param :year do
+        resource :section do
+          route_param :section do
+            desc 'something'
+            resource :students do
+              get do
+                present Course.myStudents(params)
+              end
+            end
+          end
+        end
+      end
+    end
   end
 end
