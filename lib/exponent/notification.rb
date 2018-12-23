@@ -8,7 +8,12 @@ module Exponent
         message << {
           to: "ExponentPushToken[#{t}]",
           title: subject,
-          body: msg
+          body: msg,
+          data: {
+            json: {
+              type: 'alerta'
+            }
+          }
         }
       end
       @client.publish message
@@ -23,6 +28,7 @@ module Exponent
           body: title,
           data: {
             json: {
+              type: 'noticia',
               title: title,
               details: details,
               date: date,
