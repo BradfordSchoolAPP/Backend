@@ -7,7 +7,7 @@ module API
       mount ::V1::News
       mount ::V1::Events
       mount ::V1::Parents
-      mount ::V1::Notifications
+      mount ::V1::Courses
     end
   end
 end
