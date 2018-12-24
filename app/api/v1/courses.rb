@@ -20,7 +20,19 @@ module V1
           present Course.sections(params)
         end
       end
-      params do 
+      resource :alert do
+        desc 'Send a notifications to course parents'
+        params do
+          requires :courses, type: Array, desc: 'List of courses to send the alert'
+          requires :title, type: String, desc: 'Title of the alert'
+          requires :details, type: String, desc: 'Details of the alert'
+        end
+        post do
+          Course.alert(params)
+          status 200
+        end
+      end
+      params do
         requires :id, type: Integer, desc: 'Course id'
       end
       route_param :id do
