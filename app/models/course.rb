@@ -2,7 +2,9 @@ class Course < ApplicationRecord
 	has_many :students
 	has_and_belongs_to_many :parents
 
-	has_many :devices, through: :parents
+	def self.students(params)
+		find(params[:id]).students
+	end
 
 	def self.years()
 	  select(:year_course).map(&:year_course).uniq
@@ -26,4 +28,12 @@ class Course < ApplicationRecord
 	  end
 	  Exponent::Notification.send(tokens, params[:title], params[:details])
 	end
+
+	def self.myStudents(params)
+		if params[:section].nil?
+			where(year_course: params[:year]).map(&:students)
+		else
+			where(year_course: params[:year], section: params[:section]).map(&:students)
+		end
+  end
 end

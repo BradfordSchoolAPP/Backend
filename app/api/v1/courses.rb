@@ -32,6 +32,17 @@ module V1
           status 200
         end
       end
+      params do
+        requires :id, type: Integer, desc: 'Course id'
+      end
+      route_param :id do
+        resource :students do
+          desc 'Get student for specific course'
+          get do
+            present Course.students(params), with: Entities::Student
+          end
+        end
+      end
     end
   end
 end
