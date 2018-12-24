@@ -22,4 +22,10 @@ class New
       anew
     end
   end
+
+  def notificate
+    tokens = Device.all.collect(&:token)
+    Exponent::Notification.send_new(tokens, title, details, date, img_dir)
+    Notification.create_with_tokens(tokens, title, details, 'noticia', id.to_s)
+	end
 end

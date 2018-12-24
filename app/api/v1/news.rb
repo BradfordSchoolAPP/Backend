@@ -17,7 +17,7 @@ module V1
       post do
         anew = New.create_with_params params
         error! 'Unprocessable Entity', 422 unless anew.save
-        Device.notification_news anew if anew.important
+        anew.notificate if anew.important
         anew
       end
     end

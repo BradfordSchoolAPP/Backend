@@ -28,4 +28,8 @@ class Parent < ApplicationRecord
 	def self.students(params)
     find(params[:id]).students
 	end
+
+	def self.collect_tokens(params)
+		find(params[:id]).devices.collect(&:token)
+	end
 end

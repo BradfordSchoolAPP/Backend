@@ -20,13 +20,16 @@ class Course < ApplicationRecord
 	  else
 		courses = where('year_course' => params[:courses])
 	  end
-	  tokens = []
+		tokens = []
+		parents_id_send = []
 	  courses.each do |c|
-		c.parents.each do |p|
-		  tokens += p.devices.collect(&:token) unless p.devices.empty?
-		end
+			c.parents.each do |p|
+				parents_id_send << p.id
+				tokens += p.devices.collect(&:token) unless p.devices.empty?
+			end
 	  end
-	  Exponent::Notification.send(tokens, params[:title], params[:details])
+		Exponent::Notification.send(tokens, params[:title], params[:details])
+		Notification.create_with_tokens(tokens, params[:title], params[:details], 'alerta', nil)
 	end
 
 	def self.myStudents(params)
