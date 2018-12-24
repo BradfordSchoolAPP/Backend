@@ -3,7 +3,7 @@ module V1
     resource :news do
       desc 'Get last 10 news'
       get do
-        present New.all.limit(10).order_by('date desc'), with: Entities::New
+        present New.all, with: Entities::New
       end
 
       desc 'Create a new'
@@ -19,6 +19,13 @@ module V1
         error! 'Unprocessable Entity', 422 unless anew.save
         anew.notificate if anew.important
         anew
+      end
+
+      resource :important do
+        desc 'Get last 10 important news - for notification stash'
+        get do
+          present New.important, with: Entities::New
+        end
       end
     end
   end

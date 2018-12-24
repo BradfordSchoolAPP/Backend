@@ -1,9 +1,9 @@
 module Entities
-  class Notification < Grape::Entity
+  class Alert < Grape::Entity
+    expose :id
     expose :title
     expose :details
     expose :date
     expose :opened
-    expose :type
   end
 end

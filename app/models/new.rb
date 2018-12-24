@@ -23,9 +23,16 @@ class New
     end
   end
 
+  def self.all
+    all.limit(10).order_by('date desc')
+  end
+
+  def self.important
+    where(important: true).limit(10).order_by('date desc')
+  end
+
   def notificate
     tokens = Device.all.collect(&:token)
     Exponent::Notification.send_new(tokens, title, details, date, img_dir)
-    Notification.create_with_tokens(tokens, title, details, 'noticia', id.to_s)
-	end
+  end
 end

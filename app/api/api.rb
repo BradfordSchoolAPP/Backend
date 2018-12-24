@@ -9,6 +9,7 @@ module API
       mount ::V1::Parents
       mount ::V1::Courses
       mount ::V1::Students
+      mount ::V1::Alerts
     end
   end
 end

@@ -2,7 +2,7 @@ module Exponent
   class Notification
     @client = Exponent::Push::Client.new
 
-    def self.send(tokens, subject, msg)
+    def self.send_alert(tokens, subject, msg)
       message = []
       tokens.collect do |t|
         message << {
