@@ -23,7 +23,7 @@ class New
     end
   end
 
-  def self.all
+  def self.all_ordered
     all.limit(10).order_by('date desc')
   end
 
