@@ -1,5 +1,6 @@
 module Entities
   class Parent < Grape::Entity
+    expose :id
     expose :email
     expose :name
     expose :phone_number
