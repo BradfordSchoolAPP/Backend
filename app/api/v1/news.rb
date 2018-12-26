@@ -3,7 +3,7 @@ module V1
     resource :news do
       desc 'Get last 10 news'
       get do
-        present New.all.limit(10).order_by('date desc'), with: Entities::New
+        present New.all_ordered, with: Entities::New
       end
 
       desc 'Create a new'
@@ -17,8 +17,15 @@ module V1
       post do
         anew = New.create_with_params params
         error! 'Unprocessable Entity', 422 unless anew.save
-        Device.notification_news anew if anew.important
+        anew.notificate if anew.important
         anew
+      end
+
+      resource :important do
+        desc 'Get last 10 important news - for notification stash'
+        get do
+          present New.important, with: Entities::New
+        end
       end
     end
   end

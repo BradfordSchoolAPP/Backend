@@ -16,17 +16,22 @@ class Course < ApplicationRecord
 
 	def self.alert(params)
 	  if params[:courses].empty?
-		courses = all
+		  courses = all
 	  else
-		courses = where('year_course' => params[:courses])
+		  courses = where('year_course' => params[:courses])
 	  end
-	  tokens = []
+		tokens = []
+		parents_alert = []
 	  courses.each do |c|
-		c.parents.each do |p|
-		  tokens += p.devices.collect(&:token) unless p.devices.empty?
-		end
-	  end
-	  Exponent::Notification.send(tokens, params[:title], params[:details])
+			c.parents.each do |p|
+				if p.devices.any?
+        	parents_alert << p.id
+					tokens += p.devices.collect(&:token)
+				end
+			end
+    end
+    Alert.create_many_with_parents(parents_alert, params[:title], params[:details])
+    Exponent::Notification.send_alert(tokens, params[:title], params[:details])
 	end
 
 	def self.myStudents(params)

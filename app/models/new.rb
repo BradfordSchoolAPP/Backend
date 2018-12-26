@@ -22,4 +22,17 @@ class New
       anew
     end
   end
+
+  def self.all_ordered
+    all.limit(10).order_by('date desc')
+  end
+
+  def self.important
+    where(important: true).limit(10).order_by('date desc')
+  end
+
+  def notificate
+    tokens = Device.all.collect(&:token)
+    Exponent::Notification.send_new(tokens, title, details, date, img_dir)
+  end
 end
