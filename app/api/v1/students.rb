@@ -5,7 +5,6 @@ module V1
         requires :id, type: Integer, desc: 'Student id'
       end
       route_param :id do
-        
         resource :parents do
           desc 'Get parents of a specific student'
           get do

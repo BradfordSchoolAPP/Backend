@@ -1,6 +1,6 @@
 module Entities
   class Student < Grape::Entity
     expose :name
-    expose :course_id
+    expose :course, with: Entities::Course
   end
 end
