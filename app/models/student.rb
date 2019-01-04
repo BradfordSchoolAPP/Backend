@@ -3,7 +3,11 @@ class Student < ApplicationRecord
 	has_and_belongs_to_many :parents
 
 	def self.myParents(params)
-    find(params[:id]).parents
+		begin
+		  find(params[:id]).parents
+		rescue
+		  []
+		end
 	end
 
 	def self.CourseList(params)
