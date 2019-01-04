@@ -3,7 +3,11 @@ class Course < ApplicationRecord
 	has_and_belongs_to_many :parents
 
 	def self.students(params)
-		find(params[:id]).students
+		begin
+			find(params[:id]).students
+		rescue
+			[]
+		end
 	end
 
 	def self.years()
@@ -11,14 +15,14 @@ class Course < ApplicationRecord
 	end
 
 	def self.sections(params)
-      where(year_course: params[:course]).map(&:section)
+    where(year_course: params[:course]).map(&:section)
 	end
 
 	def self.alert(params)
 	  if params[:courses].empty?
 		  courses = all
 	  else
-		  courses = where('year_course' => params[:courses])
+		  courses = where(year_course: params[:courses])
 	  end
 		tokens = []
 		parents_alert = []

@@ -26,7 +26,11 @@ class Parent < ApplicationRecord
 	end
 
 	def self.students(params)
-    find(params[:id]).students
+		begin
+			find(params[:id]).students
+		rescue
+			[]
+		end
 	end
 
 	def self.collect_tokens(params)
