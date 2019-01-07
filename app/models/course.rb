@@ -1,7 +1,7 @@
 class Course < ApplicationRecord
 	has_many :students
 	has_and_belongs_to_many :parents
-
+	has_and_belongs_to_many :teachers
 	def self.students(params)
 		begin
 			find(params[:id]).students
