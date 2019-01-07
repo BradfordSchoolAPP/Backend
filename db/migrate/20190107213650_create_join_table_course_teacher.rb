@@ -1,8 +1,8 @@
 class CreateJoinTableCourseTeacher < ActiveRecord::Migration[5.2]
   def change
     create_join_table :courses, :teachers do |t|
-      # t.index [:course_id, :teacher_id]
-      # t.index [:teacher_id, :course_id]
+      t.references :course, foreign_key: true
+      t.references :teacher, foreign_key: true
     end
   end
 end

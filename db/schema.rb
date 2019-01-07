@@ -30,8 +30,10 @@ ActiveRecord::Schema.define(version: 2019_01_07_213650) do
   end
 
   create_table "courses_teachers", id: false, force: :cascade do |t|
-    t.bigint "course_id", null: false
-    t.bigint "teacher_id", null: false
+    t.bigint "course_id"
+    t.bigint "teacher_id"
+    t.index ["course_id"], name: "index_courses_teachers_on_course_id"
+    t.index ["teacher_id"], name: "index_courses_teachers_on_teacher_id"
   end
 
   create_table "devices", force: :cascade do |t|
@@ -101,6 +103,8 @@ ActiveRecord::Schema.define(version: 2019_01_07_213650) do
 
   add_foreign_key "courses_parents", "courses"
   add_foreign_key "courses_parents", "parents"
+  add_foreign_key "courses_teachers", "courses"
+  add_foreign_key "courses_teachers", "teachers"
   add_foreign_key "devices_parents", "devices"
   add_foreign_key "devices_parents", "parents"
   add_foreign_key "parents_logs", "parents"
