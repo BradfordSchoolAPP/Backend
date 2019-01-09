@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_18_180734) do
+ActiveRecord::Schema.define(version: 2019_01_07_213650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
     t.bigint "parent_id"
     t.index ["course_id"], name: "index_courses_parents_on_course_id"
     t.index ["parent_id"], name: "index_courses_parents_on_parent_id"
+  end
+
+  create_table "courses_teachers", id: false, force: :cascade do |t|
+    t.bigint "course_id"
+    t.bigint "teacher_id"
+    t.index ["course_id"], name: "index_courses_teachers_on_course_id"
+    t.index ["teacher_id"], name: "index_courses_teachers_on_teacher_id"
   end
 
   create_table "devices", force: :cascade do |t|
@@ -83,6 +90,11 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
     t.index ["course_id"], name: "index_students_on_course_id"
   end
 
+  create_table "teachers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+  end
+
   create_table "user_types", force: :cascade do |t|
     t.text "role"
     t.datetime "created_at", null: false
@@ -91,6 +103,8 @@ ActiveRecord::Schema.define(version: 2018_11_18_180734) do
 
   add_foreign_key "courses_parents", "courses"
   add_foreign_key "courses_parents", "parents"
+  add_foreign_key "courses_teachers", "courses"
+  add_foreign_key "courses_teachers", "teachers"
   add_foreign_key "devices_parents", "devices"
   add_foreign_key "devices_parents", "parents"
   add_foreign_key "parents_logs", "parents"
