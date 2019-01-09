@@ -10,6 +10,7 @@ module API
       mount ::V1::Courses
       mount ::V1::Students
       mount ::V1::Alerts
+      mount ::V1::Informations
     end
   end
 end
