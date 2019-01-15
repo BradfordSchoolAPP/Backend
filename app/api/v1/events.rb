@@ -38,8 +38,7 @@ module V1
         requires :id, type: JSON, desc: 'Event id to delete'
       end
       delete do
-        error! 'Unprocessable Entity', 422 unless Event.delete_with_params(params)
-        status 200
+        error! 'Not Found', 404 unless Event.delete_with_params(params)
       end
       route_param :month do
         desc 'Get events of an specific month'

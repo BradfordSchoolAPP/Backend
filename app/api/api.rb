@@ -11,6 +11,7 @@ module API
       mount ::V1::Students
       mount ::V1::Alerts
       mount ::V1::Informations
+      mount ::V1::Scolarships
     end
   end
 end
