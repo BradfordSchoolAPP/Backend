@@ -9,47 +9,43 @@ class Scolarship
   field :requeriments, type: Array
 
   def self.create_with_params(params)
-    if params.nil?
-      p 'Params is null'
-    else
+    begin
       ss = new
-      ss.title = params[:title]
+      ss.name = params[:name]
       ss.details = params[:details]
       ss.date = Time.now
       ss.deadline_date = params[:deadline_date]
       ss.deadline_hour = params[:deadline_hour]
       ss.requeriments = params[:requeriments]
       ss
+    rescue
+      []
     end
   end
 
   def self.update_with_params(params)
-    if params.nil?
-      p 'Params is null'
-    else
+    begin
       ss = find(params[:id]['$oid'].to_s)
-      if ss
-        ss.title = params[:title]
-        ss.details = params[:details]
-        ss.date = params[:date]
-        ss.deadline_date = params[:deadline_date]
-        ss.deadline_hour = params[:deadline_hour]
-        ss.requeriments = params[:requeriments]
-        ss.update
-        ss
-      end
+      ss.name = params[:name]
+      ss.details = params[:details]
+      ss.date = params[:date]
+      ss.deadline_date = params[:deadline_date]
+      ss.deadline_hour = params[:deadline_hour]
+      ss.requeriments = params[:requeriments]
+      ss.update
+      ss
+    rescue
+      []
     end
   end
 
   def self.delete_with_params(params)
-    if params.nil?
-      p 'Params is null'
-    else
+    begin
       ss = find(params[:id]['$oid'].to_s)
-      if ss
-        ss.delete
-        ss
-      end
+      ss.delete
+      ss
+    rescue
+      nil
     end
   end
 end

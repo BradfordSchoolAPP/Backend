@@ -27,33 +27,29 @@ class Event
   end
 
   def self.update_with_params(params)
-    if params.nil?
-      p 'Params is null'
-    else
+    begin
       event = find(params[:id]['$oid'].to_s)
-      if event
-        event.title = params[:title]
-        event.details = params[:details]
-        event.place = params[:place]
-        event.date = params[:date]
-        event.date_month = event.date.month
-        event.date_year = event.date.year
-        event.hour = params[:hour]
-        event.update
-        event
-      end
+      event.title = params[:title]
+      event.details = params[:details]
+      event.place = params[:place]
+      event.date = params[:date]
+      event.date_month = event.date.month
+      event.date_year = event.date.year
+      event.hour = params[:hour]
+      event.update
+      event
+    rescue
+      []
     end
   end
 
   def self.delete_with_params(params)
-    if params.nil?
-      p 'Params is null'
-    else
+    begin
       event = find(params[:id]['$oid'].to_s)
-      if event
-        event.delete
-        event
-      end
+      event.delete
+      event
+    rescue
+      nil
     end
   end
 
