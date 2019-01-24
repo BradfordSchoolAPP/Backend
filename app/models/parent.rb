@@ -36,4 +36,24 @@ class Parent < ApplicationRecord
 	def self.collect_tokens(params)
 		find(params[:id]).devices.collect(&:token)
 	end
+
+	def self.validateRegister(params)
+		parent = find_by_id(params[:id])
+		if parent.nil?
+			{info: "correo no existe en la base de datos, favor de contactarse al correo del centro de padres"}
+		else
+			if parent.active_user == true
+				{info: "correo ya tiene contraseña asignada."}
+			else
+				pass = Passgen::generate(:digits => :only, :length => 5)
+				parent.update({
+					password: pass,
+					active_user: true})
+				RegistrationMailMailer.new_register(parent,pass).deliver_now 
+				{info: "contraseña enviada al correo"}
+			end
+		end
+
+	end
+
 end

@@ -38,6 +38,17 @@ module V1
           status 200
         end
       end
+      params do
+        requires :id, type: Integer, desc: 'Parent id'
+      end
+      route_param :id do
+        desc 'Validate registration'
+        resource :validate do
+         get do
+           present Parent.validateRegister(params)
+         end
+        end
+      end
     end
   end
 end

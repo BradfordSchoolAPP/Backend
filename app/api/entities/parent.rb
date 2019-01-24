@@ -5,6 +5,7 @@ module Entities
     expose :name
     expose :phone_number
     expose :recv_notifications
+    expose :active_user
     expose :user_types, with: Entities::UserType
   end
 end
