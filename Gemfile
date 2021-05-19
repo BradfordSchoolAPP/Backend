@@ -10,7 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use MongoDB as the document database
 gem 'mongoid', '~> 7.0.2'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
